@@ -85,7 +85,7 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
   padding-bottom: 30px;
 }
 
@@ -185,7 +185,7 @@ ol {
   -webkit-line-clamp: 4;
   line-clamp: 4;
   overflow: hidden;
-  line-height: 30px;
+  line-height: 25px;
 }
 
 fieldset {
@@ -294,8 +294,7 @@ fieldset {
 }
 
 .content__list-item {
-  padding-left: 3px;
-  padding-right: 3px;
+  padding: 3px 3px;
 }
 
 .more-button {
