@@ -74,7 +74,6 @@ ol {
   grid-area: content__details;
   width: 399px;
   height: 534px;
-  grid-area: auto;
 }
 
 .content__list-container {
