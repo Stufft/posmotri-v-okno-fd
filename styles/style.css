@@ -13,7 +13,7 @@ html {
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -50,24 +50,18 @@ ol {
   background-color: #d9d9d9;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-}
-
-.result {
-  display: flex;
-  grid-area: auto;
-  padding-top: 78px;
-  flex-direction: column;
-}
-
 .content {
   margin: 133px 30px;
   height: 534px;
   display: grid;
-  grid-template-areas: 'result content__details';
+  grid-template-areas: "result content__details";
   gap: 30px;
+}
+
+.result {
+  grid-area: result;
+  padding-top: 78px;
+  flex-direction: column;
 }
 
 .search-form {
@@ -77,9 +71,10 @@ ol {
 }
 
 .content__details {
+  grid-area: content__details;
   width: 399px;
   height: 534px;
-  grid-area: content__details;
+  grid-area: auto;
 }
 
 .content__list-container {
@@ -197,10 +192,6 @@ ol {
 fieldset {
   border: none;
 }
-.search-form__checkbox-list {
-  display: flex;
-  gap: 15px;
-}
 
 .search-form__label {
   display: flex;
@@ -220,7 +211,6 @@ fieldset {
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
-
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -249,6 +239,7 @@ fieldset {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 15px;
 }
 
 .search-form__pseudo-checkbox {
@@ -259,15 +250,18 @@ fieldset {
   height: 19px;
 }
 
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+   content: "";
   position: absolute;
-  left: 1px;
-  top: 1px;
-  content: '';
-  background-color: #fff;
-  font-size: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 15px;
   height: 15px;
+  background-color: #fff;
+  font-size: inherit;
 }
 
 .search-form__submit-button {
@@ -286,7 +280,7 @@ fieldset {
   border: 1px #fff solid;
   color: #fff;
   background-color: transparent;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
