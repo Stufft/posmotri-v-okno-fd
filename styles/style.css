@@ -78,7 +78,7 @@ ol {
 
 .content__list-container {
   position: relative;
-  overflow-y: scroll;
+  overflow: auto;
   height: 300px;
 }
 
@@ -270,7 +270,7 @@ fieldset {
 
 .search-form__label:hover .search-form__label-text,
 .button:hover,
-.content__video-card-description-container:hover {
+.content__list-item:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-skip-ink: none;
