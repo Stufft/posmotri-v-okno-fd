@@ -9,6 +9,8 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -52,13 +54,13 @@ ol {
 
 .content {
   margin: 133px 30px;
-  height: 534px;
   display: grid;
   grid-template-areas: "result content__details";
   gap: 30px;
 }
 
 .result {
+  display: flex;
   grid-area: result;
   padding-top: 78px;
   flex-direction: column;
@@ -73,20 +75,18 @@ ol {
 .content__details {
   grid-area: content__details;
   width: 399px;
-  height: 534px;
 }
 
 .content__list-container {
   position: relative;
   overflow: auto;
-  height: 300px;
+  block-size: 300px;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  padding-bottom: 30px;
 }
 
 .content__video-card {
@@ -135,7 +135,7 @@ ol {
 .title {
   padding-bottom: 25px;
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -165,14 +165,11 @@ ol {
 }
 
 .content__video-card-title {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
-  word-wrap: break-word;
   width: 196px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
@@ -194,6 +191,7 @@ fieldset {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   width: fit-content;
   gap: 5px;
 }
@@ -270,14 +268,14 @@ fieldset {
 
 .search-form__label:hover .search-form__label-text,
 .button:hover,
-.content__list-item:hover {
+.content__card-link:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-skip-ink: none;
 }
 
 .button {
-  border: 1px #fff solid;
+  border: 1px currentColor solid;
   color: #fff;
   background-color: transparent;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -298,11 +296,12 @@ fieldset {
 }
 
 .more-button {
+  margin-top: 30px;
   width: 100%;
 }
 
 .button:active,
-.content__list-item:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
@@ -311,12 +310,8 @@ fieldset {
   cursor: pointer;
 }
 
-.content__list-item:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #000;
-}
-
-.preloader {
-  position: absolute;
 }
 
 .content__card-link_current {
